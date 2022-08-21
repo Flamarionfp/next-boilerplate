@@ -1,12 +1,19 @@
 import { render, screen } from '@testing-library/react';
+
 import Main from '.';
 
-describe('<Main />', () => {
-  it('should render the heading', () => {
+describe('Testing the main component', () => {
+  it('should render the logo', () => {
     const { container } = render(<Main />);
 
-    expect(screen.getByRole('heading', { name: /react avançado/i })).toBeInTheDocument();
+    expect(screen.getByTestId('logo')).toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Should render the colors correctly', () => {
+    const { container } = render(<Main />);
+
+    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' });
   });
 });
