@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import Main from '.';
+import { Main } from './Main';
 
 const Template: Story = (args) => <Main {...args} />;
 

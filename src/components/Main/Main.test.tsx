@@ -1,13 +1,12 @@
 import { render, screen } from '@testing-library/react';
 
-import Main from '.';
+import { Main } from './Main';
 
 describe('Testing the main component', () => {
   it('should render the logo', () => {
     const { container } = render(<Main />);
 
     expect(screen.getByTestId('logo')).toBeInTheDocument();
-
     expect(container.firstChild).toMatchSnapshot();
   });
 

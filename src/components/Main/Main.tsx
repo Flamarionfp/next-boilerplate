@@ -1,6 +1,6 @@
-import { Description, Illustration, Logo, Title, Wrapper } from './styles';
+import { Description, Illustration, Logo, Title, Wrapper } from './Main.styles';
 
-const Main = ({
+export const Main = ({
   title = 'React Avançado',
   description = 'TypeScript, ReactJS, NextJS e Styled Components',
 }) => {
@@ -20,5 +20,3 @@ const Main = ({
     </Wrapper>
   );
 };
-
-export default Main;
